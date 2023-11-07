@@ -11,4 +11,4 @@ handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(me
 logger.addHandler(handler)
 
 # Run Bot
-command_handler.bot.run(token = BOT_TOKEN, log_handler=None)	
+command_handler.bot.run(token = BOT_TOKEN)
