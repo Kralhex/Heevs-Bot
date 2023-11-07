@@ -1,7 +1,7 @@
 import nextcord
 from nextcord.ext import commands
 
-from commands import delete_messages, who, ping, team_up
+from commands import delete_messages, who, ping, team_up, notifications
 
 intents = nextcord.Intents.default()
 intents.message_content = True
@@ -19,6 +19,7 @@ bot.add_command(who.whoareyou)
 bot.add_command(who.whoami)
 bot.add_command(who.whois)
 bot.add_command(team_up.team_me)
+bot.add_command(notifications.notify)
 
 @bot.event
 async def on_ready():
