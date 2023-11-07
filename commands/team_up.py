@@ -1,7 +1,7 @@
 from nextcord.ext import commands
 
 @commands.command(name="team_me")
-async def team_me(ctx, teammate_no: int, game_name: str):
+async def team_me(ctx: commands.Context, teammate_no: int, game_name: str):
 	channel = ctx.channel
 	await channel.delete_messages([ctx.message])
 	author = ctx.author
