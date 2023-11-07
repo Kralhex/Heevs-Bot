@@ -1,4 +1,4 @@
-from discord.ext import commands
+from nextcord.ext import commands
 
 
 @commands.command(name="who_are_you")
@@ -12,7 +12,7 @@ async def whoareyou(ctx):
 async def whoami(ctx):
 	author = ctx.author
 	msg = f"You are {author.name} with the ID {author.id}.\n"
-	msg += f"You have created your discord account on {author.created_at:%d %B %Y } at {author.created_at:%H:%M } and joined this server on {author.joined_at:%d %B %Y } at {author.joined_at:%H:%M }.\n"
+	msg += f"You have created your nextcord account on {author.created_at:%d %B %Y } at {author.created_at:%H:%M } and joined this server on {author.joined_at:%d %B %Y } at {author.joined_at:%H:%M }.\n"
 	await ctx.send(msg)
 
 
@@ -25,5 +25,5 @@ async def whois(ctx, searched_id: int):
 	else:
 		searched = searched[0]
 	msg = f"They are {searched.name} with the ID {searched.id}.\n"
-	msg += f"They have created their discord account on {searched.created_at:%d %B %Y } at {searched.created_at:%H:%M } and joined this server on {searched.joined_at:%d %B %Y } at {searched.joined_at:%H:%M }.\n"
+	msg += f"They have created their nextcord account on {searched.created_at:%d %B %Y } at {searched.created_at:%H:%M } and joined this server on {searched.joined_at:%d %B %Y } at {searched.joined_at:%H:%M }.\n"
 	await ctx.send(msg)

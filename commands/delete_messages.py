@@ -1,4 +1,4 @@
-from discord.ext import commands
+from nextcord.ext import commands
 
 @commands.command(name="delete_limited")
 async def delete_limited(ctx, limit: int):

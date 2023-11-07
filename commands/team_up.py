@@ -1,4 +1,4 @@
-from discord.ext import commands
+from nextcord.ext import commands
 
 @commands.command(name="team_me")
 async def team_me(ctx, teammate_no: int, game_name: str):

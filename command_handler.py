@@ -1,9 +1,9 @@
-import discord
-from discord.ext import commands
+import nextcord
+from nextcord.ext import commands
 
 from commands import delete_messages, who, ping, team_up
 
-intents = discord.Intents.default()
+intents = nextcord.Intents.default()
 intents.message_content = True
 intents.members = True
 intents.guilds = True
