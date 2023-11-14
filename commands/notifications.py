@@ -1,6 +1,6 @@
 from nextcord.ext import commands
-
 from dateparser import parse
+
 import datetime
 import time
 
@@ -42,6 +42,6 @@ async def notify(ctx: commands.Context):
 	wait_time = wait_time if wait_time > 0 else 5
 	# Confirmation message and notification
 	await ctx.send(f"Okie dokie, will ping you in {channel.mention} at {notification_datetime.strftime('%H:%M:%S on %d %b %Y')}.")
-	# This needs to be threaded \|/
 	time.sleep(wait_time)
-	await channel.send(content = notify_message)
+	await channel.send(notify_message)
+
